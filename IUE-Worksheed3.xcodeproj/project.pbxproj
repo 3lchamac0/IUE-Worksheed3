@@ -16,6 +16,7 @@
 		2C09B76A234DF78200CD14C0 /* IUE_Worksheed3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C09B769234DF78200CD14C0 /* IUE_Worksheed3Tests.swift */; };
 		2C09B775234DF78300CD14C0 /* IUE_Worksheed3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C09B774234DF78300CD14C0 /* IUE_Worksheed3UITests.swift */; };
 		2C9F57492357367400AE9C45 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F57482357367400AE9C45 /* PhotoCollectionViewCell.swift */; };
+		2C9F575223574A3100AE9C45 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F575123574A3100AE9C45 /* PhotosCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +52,7 @@
 		2C09B774234DF78300CD14C0 /* IUE_Worksheed3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUE_Worksheed3UITests.swift; sourceTree = "<group>"; };
 		2C09B776234DF78300CD14C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C9F57482357367400AE9C45 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
-		2C9F574E235737BF00AE9C45 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		2C9F575123574A3100AE9C45 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +107,7 @@
 				2C09B754234DF78100CD14C0 /* SceneDelegate.swift */,
 				2C09B756234DF78100CD14C0 /* ViewController.swift */,
 				2C09B758234DF78100CD14C0 /* Main.storyboard */,
-				2C9F574E235737BF00AE9C45 /* PhotosCollectionViewController.swift */,
+				2C9F575123574A3100AE9C45 /* PhotosCollectionViewController.swift */,
 				2C9F57482357367400AE9C45 /* PhotoCollectionViewCell.swift */,
 				2C09B75B234DF78200CD14C0 /* Assets.xcassets */,
 				2C09B75D234DF78200CD14C0 /* LaunchScreen.storyboard */,
@@ -267,6 +268,7 @@
 				2C09B757234DF78100CD14C0 /* ViewController.swift in Sources */,
 				2C9F57492357367400AE9C45 /* PhotoCollectionViewCell.swift in Sources */,
 				2C09B753234DF78100CD14C0 /* AppDelegate.swift in Sources */,
+				2C9F575223574A3100AE9C45 /* PhotosCollectionViewController.swift in Sources */,
 				2C09B755234DF78100CD14C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
