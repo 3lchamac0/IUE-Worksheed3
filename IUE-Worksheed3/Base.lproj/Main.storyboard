@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -132,6 +132,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="onb-48-DBb" kind="show" id="vCk-WO-7q7"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="7Tg-Tl-jj1">
                                         <rect key="frame" x="0.0" y="360.5" width="414" height="43.5"/>
@@ -170,20 +173,56 @@
             </objects>
             <point key="canvasLocation" x="905.79710144927549" y="-61.607142857142854"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="QG3-Yf-LuX">
+        <!--Photos Collection View Controller-->
+        <scene sceneID="1tR-3y-ajb">
             <objects>
-                <viewController id="4Lu-Jy-rl0" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0mp-En-eHJ">
+                <collectionViewController id="onb-48-DBb" customClass="PhotosCollectionViewController" customModule="IUE_Worksheed3" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dM0-Bi-luY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="MGm-Ni-hzx"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UPj-ON-RpB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Pqp-yY-1jt">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="he7-UG-gRf" customClass="PhotoCollectionViewCell" customModule="IUE_Worksheed3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="P25-9J-v9z">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="esad" translatesAutoresizingMaskIntoConstraints="NO" id="m6n-1p-tw8">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="m6n-1p-tw8" firstAttribute="leading" secondItem="P25-9J-v9z" secondAttribute="leading" id="29E-rZ-gdb"/>
+                                        <constraint firstAttribute="trailing" secondItem="m6n-1p-tw8" secondAttribute="trailing" id="Yw3-P4-yqk"/>
+                                        <constraint firstAttribute="bottom" secondItem="m6n-1p-tw8" secondAttribute="bottom" id="otw-6x-bF4"/>
+                                        <constraint firstItem="m6n-1p-tw8" firstAttribute="top" secondItem="P25-9J-v9z" secondAttribute="top" id="wYj-S2-CII"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="customSize" width="100" height="100"/>
+                                <connections>
+                                    <outlet property="imageView" destination="m6n-1p-tw8" id="huJ-lm-DyZ"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="onb-48-DBb" id="uAH-7H-jtC"/>
+                            <outlet property="delegate" destination="onb-48-DBb" id="HCw-k3-DXX"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="XH6-bs-0O0"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyz-Kk-VcL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="284"/>
+            <point key="canvasLocation" x="1771.0144927536232" y="323.4375"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="cbP-Nf-Oq3">
@@ -316,6 +355,7 @@
     </scenes>
     <resources>
         <image name="airplane" catalog="system" width="64" height="58"/>
+        <image name="esad" width="3750" height="5498"/>
         <image name="person.2.square.stack" catalog="system" width="54" height="64"/>
         <image name="person.circle.fill" catalog="system" width="64" height="62"/>
         <image name="photo" catalog="system" width="64" height="48"/>
